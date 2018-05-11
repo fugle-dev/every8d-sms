@@ -12,8 +12,8 @@
   "dependencies": {
     "chai": "^4.0.2",
     "mocha": "^3.4.2",
-    "request": "^2.81.0",
-    "request-promise": "^4.2.1"
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2"
   },
   "devDependencies": {
     "eslint": "^3.12.0",
