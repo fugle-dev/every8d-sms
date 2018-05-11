@@ -1,7 +1,5 @@
 const rp = require('request-promise');
 
-const url = 'https://oms.every8d.com/API21/HTTP/sendSMS.ashx';
-
 /**
  * send sms
  * @param {string} uid - login account
@@ -13,6 +11,7 @@ const url = 'https://oms.every8d.com/API21/HTTP/sendSMS.ashx';
  * @returns {object} credit,sended numbers,cost,unsend numbers,batch id,error
  */
 exports.send = async function(uid, password, subject, msg, dest, time) {
+    const url = 'https://oms.every8d.com/API21/HTTP/sendSMS.ashx';
     try {
         const result = await rp({
             uri: url,
@@ -47,3 +46,35 @@ exports.send = async function(uid, password, subject, msg, dest, time) {
     }
 };
 
+/**
+ * get credit
+ * @param {string} uid - login account
+ * @param {string} password - login password
+ * @returns {object} credit,error
+ */
+exports.getCredit = async function(uid, password) {
+    const url = 'https://oms.every8d.com/API21/HTTP/getCredit.ashx';
+    try {
+        const result = await rp({
+            uri: url,
+            method: 'GET',
+            qs: {
+                UID: uid,
+                PWD: password,
+            },
+        });
+        if (isNaN(Number(result))) {
+            return {
+                error: `return format error: ${result}`,
+            };
+        }
+        return {
+            credit: result,
+            error: null,
+        };
+    } catch(e) {
+        return {
+            error: e.message,
+        };
+    }
+};
