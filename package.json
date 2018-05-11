@@ -8,6 +8,7 @@
   },
   "author": "",
   "license": "MIT",
+  "repository": "github:fortuna-intelligence/every8d-sms",
   "dependencies": {
     "chai": "^4.0.2",
     "mocha": "^3.4.2",
