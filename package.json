@@ -11,7 +11,7 @@
   "repository": "github:fortuna-intelligence/every8d-sms",
   "dependencies": {
     "chai": "^4.0.2",
-    "mocha": "^5.1.1",
+    "mocha": "^7.1.1",
     "request": "^2.88.0",
     "request-promise": "^4.2.2"
   },
