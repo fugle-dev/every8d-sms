@@ -8,7 +8,7 @@
   },
   "author": "",
   "license": "MIT",
-  "repository": "github:fortuna-intelligence/every8d-sms",
+  "repository": "github:fugle-dev/every8d-sms",
   "dependencies": {
     "chai": "^4.0.2",
     "mocha": "^7.1.1",
