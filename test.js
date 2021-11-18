@@ -13,7 +13,7 @@ describe('send sms', function() {
 
     it('wrong password', async function() {
         const result = await send(uid, '1234', '', '', '', '');
-        expect(result.error).to.equal('return format error: -101, 密碼錯誤。');
+        expect(result.error).to.equal('return format error: -100, 帳號或密碼錯誤(Hl2)！');
     });
 
     it('complete message', async function() {
@@ -30,7 +30,7 @@ describe('get credit', function() {
 
     it('wrong password', async function() {
         const result = await getCredit(uid, '1234');
-        expect(result.error).to.equal('return format error: -101, 密碼錯誤。');
+        expect(result.error).to.equal('return format error: -100, 帳號或密碼錯誤(Hl2)！');
     });
 
     it('complete message', async function() {

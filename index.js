@@ -11,7 +11,7 @@ const rp = require('request-promise');
  * @returns {object} credit,sended numbers,cost,unsend numbers,batch id,error
  */
 exports.send = async function(uid, password, subject, msg, dest, time) {
-    const url = 'https://oms.every8d.com/API21/HTTP/sendSMS.ashx';
+    const url = 'https://api.e8d.tw/API21/HTTP/sendSMS.ashx';
     try {
         const result = await rp({
             uri: url,
@@ -53,7 +53,7 @@ exports.send = async function(uid, password, subject, msg, dest, time) {
  * @returns {object} credit,error
  */
 exports.getCredit = async function(uid, password) {
-    const url = 'https://oms.every8d.com/API21/HTTP/getCredit.ashx';
+    const url = 'https://api.e8d.tw/API21/HTTP/getCredit.ashx';
     try {
         const result = await rp({
             uri: url,
