@@ -17,5 +17,4 @@ console.log(result2);
 
 # Reference:
 
-https://tw.every8d.com/E8DPortal/InformationDownload.aspx
-
+https://www.teamplus.tech/product/every8d-download/
