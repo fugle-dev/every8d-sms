@@ -2,6 +2,7 @@ const rp = require('request-promise');
 
 /**
  * send sms
+ * @prarm {string} url - API url
  * @param {string} uid - login account
  * @param {string} password - login password
  * @param {string} subject - message subject only for admin use
@@ -10,11 +11,10 @@ const rp = require('request-promise');
  * @param {string} time - time to send msg (leave blank for immediate delivery)
  * @returns {object} credit,sended numbers,cost,unsend numbers,batch id,error
  */
-exports.send = async function(uid, password, subject, msg, dest, time) {
-    const url = 'https://api.e8d.tw/API21/HTTP/sendSMS.ashx';
+exports.send = async function(url, uid, password, subject, msg, dest, time) {
     try {
         const result = await rp({
-            uri: url,
+            uri: url || 'https://biz3.every8d.com.tw/prepaid/API21/HTTP/sendSMS.ashx',
             method: 'GET',
             qs: {
                 UID: uid,
@@ -48,15 +48,15 @@ exports.send = async function(uid, password, subject, msg, dest, time) {
 
 /**
  * get credit
+ * @prarm {string} url - API url
  * @param {string} uid - login account
  * @param {string} password - login password
  * @returns {object} credit,error
  */
-exports.getCredit = async function(uid, password) {
-    const url = 'https://api.e8d.tw/API21/HTTP/getCredit.ashx';
+exports.getCredit = async function(url, uid, password) {
     try {
         const result = await rp({
-            uri: url,
+            uri: url || 'https://biz3.every8d.com.tw/prepaid/API21/HTTP/getCredit.ashx',
             method: 'GET',
             qs: {
                 UID: uid,

@@ -1,6 +1,6 @@
 {
   "name": "every8d-sms",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,13 +11,14 @@
   "repository": "github:fugle-dev/every8d-sms",
   "dependencies": {
     "chai": "^4.0.2",
+    "dotenv": "^16.0.3",
     "mocha": "^10.1.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.2"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-plugin-import": "^2.18.0"
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.2"
   }
 }
