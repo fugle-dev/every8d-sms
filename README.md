@@ -8,10 +8,10 @@ npm install every8d-sms
 
 ```
 const sms = require('every8d-sms');
-const result1 = await sms.send(uid, password, ...);
+const result1 = await sms.send(url, uid, password, ...);
 console.log(result1);
 
-const result2 = await sms.getCredit(uid, password);
+const result2 = await sms.getCredit(url, uid, password);
 console.log(result2);
 ```
 
